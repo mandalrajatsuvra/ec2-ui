@@ -1,0 +1,58 @@
+
+.username001{
+    position: relative;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    width: 70vw;
+    height: 40px;
+    left: 15vw;
+    top: 100px;
+
+}
+
+@media only screen and (min-width: 800px){
+  .ui0001{
+    position: relative;
+    background-color: black;
+    opacity: 0.96;
+    height: 100vh;
+    width: 50vw;
+    left: 25vw;
+  }
+}
+@media only screen and (max-width: 800px){
+  .ui0001{
+    background-color: black;
+    opacity: 0.85;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+.ui002{
+  position: absolute;
+  top: 0;
+  background-color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 3vw;
+  box-shadow: 2px 5px 8px black;
+  background-color: black;
+  opacity: 0.90;
+  padding: 15px;
+  width: 94vw;
+  height: 90vh;
+
+}
+.form-group{
+  position: relative;
+  top: 50px;
+
+}
+.marquee{
+  font-size: 20px;
+  color: blue;
+
+}

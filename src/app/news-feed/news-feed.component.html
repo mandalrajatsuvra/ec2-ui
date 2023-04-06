@@ -1,0 +1,11 @@
+<div class="news-daily">
+  <div style="text-align: center;">News Feed</div>
+  <div *ngFor="let newsArticles of newsData">
+      <div class="col-xs-12">
+        <div class="box-view">
+          <strong><u><i class="fa fa-hand-o-right" aria-hidden="true"> </i>Title: {{newsArticles.title}}  </u> </strong>
+          <p style="font-weight: lighter;">{{newsArticles.description}}</p>
+        </div>
+      </div>
+    </div>
+</div>

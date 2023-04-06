@@ -1,0 +1,12 @@
+<div class="back-drop">
+    <div 
+         class="MediumImageNameClass"
+         *ngIf="isPopupOpen">{{firstName}}</div>
+</div>
+
+<img 
+    [src]="imageSource"
+    (click)= "clickOnMediumImage($event)"
+    class="popup"  [ngClass]="{AnimatePopUp: isPopupOpen}" >
+
+

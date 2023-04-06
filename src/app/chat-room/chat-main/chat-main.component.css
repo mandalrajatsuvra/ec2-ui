@@ -1,0 +1,24 @@
+.appUsersDiv{
+  /*position: absolute;
+  top: 65px;
+  width: 100vw;
+  padding: 15px;
+  margin-left: 0vw;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 2px 5px 8px #888888;*/
+
+   position: absolute;
+   top: 70px;
+   /* margin-top: 70px; */
+   width: 100vw;
+   background-color: #1a1a1a;
+   background-color: white;
+   color: white;
+   height: fit-content;
+   z-index: 20;
+   /* padding: 20px; */
+   opacity: 0.99;
+   box-shadow: 2px 2px 3px gray;
+
+}

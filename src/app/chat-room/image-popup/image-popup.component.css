@@ -1,0 +1,48 @@
+/* .back-drop{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  z-index: 220;
+  opacity: .40;
+} */
+
+.popup{
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  height: 0vh;
+  width: 0vw;
+  z-index: 300;
+  background-color: black;
+  opacity: .99;
+  transform: translateX(10vw); 
+  transform: translateY(40vh);
+  -webkit-transform: translateX(-150%) ;
+  -webkit-transform: translateY(20vh) ;
+  
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+.AnimatePopUp{
+  height: 40vh;
+  width: 60vw; 
+  -webkit-transform: translateX(0);
+  -webkit-transform: translateY(0);
+  transform: translateX(0);
+  transform: translateY(0);
+}
+.MediumImageNameClass{
+  position: absolute;
+  top: 21vh;
+  left: 23vw;
+  color: black;
+  z-index: 900;
+  font-size: 14px;
+  font-weight: lighter;
+  opacity: 0.70;
+}

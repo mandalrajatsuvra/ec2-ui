@@ -1,0 +1,18 @@
+.news-daily{
+  position: relative;
+  top: 60px;
+  z-index: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.box-view{
+  margin: 15px;
+  box-shadow: 2px 5px 8px #888888;
+  background-color: white;
+  padding: 15px;
+  width: 94vw;
+}
+
+.fa-hand-o-right{
+  color: green;
+}

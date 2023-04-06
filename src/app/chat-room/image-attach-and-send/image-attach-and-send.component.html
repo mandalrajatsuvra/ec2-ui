@@ -1,0 +1,13 @@
+<input type="file" #hiddenFileInput
+    (change)="handleImageInput($event.target.files)"
+    class="form-control-file"
+    formControlName ="uploadimage">
+
+<div class="imageAboutToSend" *ngIf="shouldRenderImageIcon">
+    <img [src]="picSendImageSrc" alt="Send Image Alt" class="imageSendClass"> 
+         
+</div>
+<div *ngIf="shouldRenderImageIcon">
+    <div  (click)="onClickSendButton()"  class="circulerDiv chatWindowSendButton"><i class="fa fa-paper-plane"></i></div>
+    <div  (click)="onClickBackButton()"  class="circulerDiv chatWindowBackButton"><i class="fa fa-arrow-left"></i></div>
+</div>

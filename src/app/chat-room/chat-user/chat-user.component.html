@@ -1,0 +1,15 @@
+<div class="eachUserChatDivClass"
+      [ngClass]="{eachUserChatDivClassAfterClick: isClickEventDone}">
+      <img
+           (click)="onClickImageIcon($event, firstName)"
+           [src]="imageurl"
+           class="eachUserChatDivImageClass">
+      <span class="onLineOffLineClass" *ngIf="isOnline"></span>
+      <div class="rightSideDiv" (click)="onClickEachUserChatDiv()">
+          <span class="firstNameClass">{{firstName}}</span>
+          <span *ngIf="messageCount>0"
+                class="hasNewMessageInInbox">{{messageCount}}</span>
+          <span *ngIf="messageCount>0"
+                class="unReadMessageTimeStamp">{{formatUnreadMessageTimeStamp(unReadMessageTimeStamp)}}</span>
+      </div>
+</div>

@@ -1,0 +1,52 @@
+.eachSendMessagePClass{
+
+    border-radius:10px;
+    margin-left:auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top:5px ;
+    padding: 4px 10px 4px 10px; 
+    font-size: 16px;
+    background: white; 
+    right: 20px ;
+    width: fit-content;
+    height: fit-content; 
+    font-weight: lighter;
+    color: black ;
+    box-shadow: 1px 1px 1px lightgray;
+    bottom:20px;
+    margin-right: 12px;
+}
+.eachReceiveMessagePClass{
+    border-radius:10px;
+    margin-left:auto;
+    font-family: 'Roboto', sans-serif;
+    margin-top:5px ;
+    padding: 4px 10px 4px 10px; 
+    font-size: 16px;
+    background: #80ff80; 
+    right: 20px ;
+    width: fit-content;
+    height: fit-content; 
+    font-weight: lighter;
+    color: rgb(2, 1, 1) ;
+    box-shadow: 1px 1px 1px lightgray;
+    bottom:20px;
+    margin-left: 12px;
+}
+.timeStampClass{
+    color:gray; 
+    font-size: 11px;
+    margin-left:auto; 
+    font-weight: lighter ;
+    margin-top: 10px
+}
+.fa-check-double{
+    font-weight: 300;
+    font-size: 12px;
+    color: gray;
+}
+.fa-check{
+    font-weight: 300;
+    font-size: 12px;
+    color: gray;
+}

@@ -1,0 +1,36 @@
+<app-spinner *ngIf="isSpinner"></app-spinner>
+<app-image-popup
+           [isPopupOpen]="isPopupOpen"
+           [imageSource]="popUpImageSrc"
+           [firstName] ="firstName"
+           (click) = "onClickMediumImage()"
+           (appMediumImageClickedEvent) ="changeSizeLarge($event)"></app-image-popup>
+<app-image-large-popup
+          *ngIf ="isLargePopupOpen"
+          [imageSource]="popUpImageSrc"
+          (onBackEvent) = "isLargePopupOpen = !isLargePopupOpen"></app-image-large-popup>
+<div *ngIf="userArray.length"  class="appUsersDiv">
+    <app-chat-user *ngFor="let user of userArray"
+        [firstName]="user.firstname"
+        [lastName]="user.lastname"
+        [imageurl]="user.imageurl"
+        [userId]="user.id"
+        [isOnline]="user.online"
+        [messageCount]="user.noOfUnreadMessages"
+        [unReadMessageTimeStamp]="user.unreadMessageTimeStamp"
+        (imagePopupOpen)="initiateImageSrc($event)">
+    </app-chat-user>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+.eachSendMessageImgClass{
+    border-radius:10px;
+    margin-right:auto;
+    margin-top:5px ;
+    padding: 4px 10px 4px 10px; 
+    background: white; 
+    right: 20px ;
+    width: 245px;
+    height: 245px; 
+    box-shadow: 1px 1px 1px lightgray;
+    margin-right: 12px;
+    margin-right: 12px;
+    float: right;
+}
+.eachReceiveMessageImgClass{
+    border-radius:10px;
+    margin-left:auto;
+    margin-top:5px ;
+    padding: 4px 10px 4px 10px; 
+    background: white; 
+    right: 20px ;
+    width: 245px;
+    height: 245px;
+    color: rgb(2, 1, 1) ;
+    box-shadow: 1px 1px 1px lightgray;
+    margin-left: 12px;
+}
+.timeStampClass{
+    color:white; 
+    font-size: 10px;
+    margin-left:auto; 
+    font-weight: lighter ;
+    margin-top: -15px
+}

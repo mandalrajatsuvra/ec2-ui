@@ -1,0 +1,40 @@
+<div class="chatWindow001" (window:resize)="onResizeWindow($event)">
+  <div class="chatWindowHeader001">
+      <img [src]="user.imageurl" class="chatWindowImageClass">
+      <p class="typingClass" *ngIf="isTyping">typing...</p>
+      <p class="chatWindowNameClass001">{{user.firstname}}</p>
+  </div>
+  <div class="messageContainer001" #messageContainer>
+    <ng-template  appAddDirective>
+
+    </ng-template>
+  </div>
+
+  <app-image-attach-and-send
+           [from]="imageService.user.id"
+           [to]="user.id"
+           [addDirective]="addDirective"></app-image-attach-and-send>
+
+  <div class="chatWindowFooter">
+    <div class="chatWindowFooterMiddle"
+        [ngStyle]="{height:(enterPressCountInTextArea>=0 && enterPressCountInTextArea<4)
+                          ? ((enterPressCountInTextArea)*25)+35+'px' : (4*25+35)+'px',
+
+                    top:  (enterPressCountInTextArea>=0 && enterPressCountInTextArea<4)?
+                          'calc(100vh - '+ (90+(enterPressCountInTextArea*28))+'px )'
+                           :'calc(100vh - '+ (90+(4*28))+'px )'}">
+      <textarea  (keyup)="onTextChange($event)"
+                 #inputSendTextArea
+                 [ngStyle]="{height:  enterPressCountInTextArea>=0 && enterPressCountInTextArea<4 ?
+                                     ((enterPressCountInTextArea)*25+25)+'px' : '100px'}"
+                 [ngClass]="{overFlowText: enterPressCountInTextArea>4}"
+                 class="messageSendInputBox"
+                 placeholder="Type a message"></textarea>
+                 <span><i class="fas fa-paperclip" (click)="onClickAttachItem()"  ></i></span>
+
+    </div>
+    <div (click)="onClickSendButton($event)" class="circulerDiv chatWindowSendButton"><i class="fa fa-paper-plane"></i></div>
+    <div (click)="onClickBackButton($event)" class="circulerDiv chatWindowBackButton"><i class="fa fa-arrow-left"></i></div>
+  </div>
+</div>
+

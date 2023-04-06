@@ -1,0 +1,31 @@
+<div class="navbar  header0001">
+
+      <div class="navIcon001"
+          (click)="menuDivActive=!menuDivActive"
+          [ngClass]="{addedclass: menuDivActive}">
+              <div class="line"  [ngClass]="{lineAfter: menuDivActive}"></div>
+              <div class="line-separator1"></div>
+              <div class="line"  [ngClass]="{lineAfter: menuDivActive}"></div>
+              <div class="line-separator2" ></div>
+              <div class="line"  [ngClass]="{lineAfter: menuDivActive}"></div>
+              <div class="line-separator3"></div>
+              <div class="line"  [ngClass]="{lineAfter: menuDivActive}"></div>
+      </div>
+
+        <p class="club-name">Maliantala club</p>
+        <p class="userNameClass">{{appUser}}</p>
+        <img [src]="imageUrl" style="width: 40px; height: 40px;">
+</div>
+
+<div class="nav007"  [ngClass]="{nav007IsVisible: menuDivActive}">
+  <span class="navmenuback001 mnavback"  (click)="menuDivActive =false" > Back</span>
+  <div *ngFor="let routeDetails of mainNavRoutes"  class="navmenuback001">
+    <i class="fa fa-hand-o-right"></i>
+    <a  (click)="menuDivActive =!menuDivActive"
+        [routerLink]="routeDetails.name"
+        routerLinkActive="router-link-active-class"
+        [routerLinkActiveOptions]="{exact: true}">&nbsp; {{routeDetails.value}}</a>
+
+  </div>
+</div>
+

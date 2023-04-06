@@ -1,0 +1,74 @@
+
+<app-spinner *ngIf="isSpinerTrue"></app-spinner>
+
+<div class="ui002">
+  <div class="container">
+    <form [formGroup] ="userFormGroup"  (ngSubmit)="onSubmitUserForm()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputLabel">UserName</label>
+          <input type="username"
+                 class="form-control"
+                 formControlName="username"
+                 id="inputEmail4"
+                 placeholder="@UserName"
+                 autocomplete="off">
+        </div>
+        <div class="form-group col-md-6">
+         <label for="inputPassword4">Password</label>
+          <input type="password"
+                 class="form-control"
+                 formControlName="password"
+                 id="inputPassword4"
+                 placeholder="@Passworrd"
+                 autocomplete="off">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLabel">First Name</label>
+          <input type="name"
+                  class="form-control"
+                  formControlName="firstname"
+                  id="inputName4"
+                  placeholder="@YourName"
+                  autocomplete="off">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLabel">Last Name</label>
+          <input type="name"
+                  class="form-control"
+                  formControlName="lastname"
+                  id="inputName4"
+                  placeholder="@YourName"
+                  autocomplete="off">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputLabel">Address</label>
+        <input type="text"
+                class="form-control"
+                formControlName="address"
+                id="inputAddress"
+                placeholder="Address...">
+      </div>
+      <div class="form-group">
+        <label for="inputPhone">Phone No</label>
+        <input type="text"
+                class="form-control"
+                formControlName="phoneno"
+                id="inputPhone"
+                placeholder="Phone...">
+      </div>
+     <div class="form-group col-md-6">
+          <i type="file" class="fa fa-upload" aria-hidden="true"></i><p style="color: green;">upload your image</p>
+          <img [src]="imageUrl" style="width: 100px ; height: 100px;" (click)="onClickImageIcon()" >
+          <input type="file" #hiddenFileInput
+                (change)="handleImageInput($event.target.files)"
+                 class="form-control-file"
+                 formControlName ="uploadimage">
+       </div>
+       <div class="form-group">
+          <button type="submit" [disabled]="!userFormGroup.valid"  class="btn btn-success">Create Account</button>
+       </div>
+    </form>
+  </div>
+</div>

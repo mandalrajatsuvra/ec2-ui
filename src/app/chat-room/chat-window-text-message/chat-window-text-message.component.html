@@ -1,0 +1,16 @@
+<div>
+    <p  [ngClass]="{eachSendMessagePClass: isRightMessage , eachReceiveMessagePClass: !isRightMessage}">
+        {{message}}
+        &nbsp;
+        <span class="timeStampClass">{{timestamp}}</span>
+        &nbsp;
+        <i  class="fas fa-check"  
+            *ngIf="checkSingleIcon"></i>
+        <i  class="fas fa-check-double"
+            *ngIf="checkDoubleIcon"
+            [ngStyle]="{
+                        'color': checkDoubleBlueIcon? '#006600': 'gray' , 
+                        'font-weight': checkDoubleBlueIcon ? '500': '300',
+                        'font-size' : checkDoubleBlueIcon ?  '15px': '15px'}"></i>
+    </p>
+</div>

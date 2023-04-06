@@ -1,0 +1,8 @@
+<div>
+    <img
+        [src]="imageSource"  
+        [ngClass]="{eachSendMessageImgClass: isRightMessage , eachReceiveMessageImgClass: !isRightMessage}"
+        accept="image/*">
+        &nbsp;&nbsp;
+    <span class="timeStampClass">{{getTimeStamp()}}</span>
+</div>
